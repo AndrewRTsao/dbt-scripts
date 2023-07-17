@@ -4,7 +4,7 @@ This python script can be used to migrate a dbt project to a target new dbt proj
 
 # Getting Started
 
-1. Clone this repo to where you plan to be executing the python script (e.g. local machine). If on a corporate network or behind a firewall, please make sure that the dbt Cloud instance is reachable by the script or you will run into network connectivity issues with the API calls.
+1. Clone this repo locally to where you'll be executing the python script. If on a corporate network or behind a firewall, please make sure that the dbt Cloud instance is reachable by the script or you will run into potential network connectivity issues with the API.
 
 2. Create a virtual environment and pip install requirements.txt
 
@@ -22,7 +22,7 @@ source env.sh
 
 *Note: The values of the environment variables should be kept within existing double quotes.* 
 
-5. Run the **migrate_project.py** script to kick off the migration process. This will copy all environments, jobs, and environment variables from the original project to the new target project (as specified in the **env.sh** file)
+5. Run the **migrate_project.py** script to kick off the migration process. This will copy all environments, jobs, and environment variables from the original project to the new target project (as specified in the **env.sh** file).
 
 ```sh
 python migrate_project.py
@@ -32,9 +32,9 @@ python migrate_project.py
 
 6. Please note that once the script completes, you will still need to input / update credentials in your target project. Please see the limitations described below. 
 
-## Limitations of script / Post-script action items
+## Limitations of python script / post-script action items
 
-While the script will copy over the environments, jobs, and environment variables, certain items will still need to be reviewed and updated manually. Please note the following:
+While the script will copy over all environments, jobs, and environment variables from the original project to the new project, certain items will still need to be reviewed and updated manually. Please note the following:
 - Connection settings and credentials for your new environments (in your target project)
 - Environment variable overrides *at the job or profile level*
 - Run history and other historical information will **not** be preserved between source and target projects
