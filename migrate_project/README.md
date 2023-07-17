@@ -4,7 +4,7 @@ This python script can be used to migrate a dbt project to a target new dbt proj
 
 # Getting Started
 
-1. Clone this repo to where you plan to be executing the python script (e.g. local machine). If on a corporate network or behind a firewall, please make sure that the dbt Cloud instance is reachable by the script or you will run into network connectivity issues with the API calls.
+1. Clone this repo locally to where you'll be executing the python script. If on a corporate network or behind a firewall, please make sure that the dbt Cloud instance is reachable by the script or you will run into network connectivity issues with the API calls.
 
 2. Create a virtual environment and pip install requirements.txt
 
@@ -32,7 +32,7 @@ python migrate_project.py
 
 6. Please note that once the script completes, you will still need to input / update credentials in your target project. Please see the limitations described below. 
 
-## Limitations of script / Post-script action items
+## Limitations of python script / post-script action items
 
 While the script will copy over the environments, jobs, and environment variables, certain items will still need to be reviewed and updated manually. Please note the following:
 - Connection settings and credentials for your new environments (in your target project)
