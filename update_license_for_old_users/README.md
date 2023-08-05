@@ -24,7 +24,9 @@ source env.sh
 python update_licenses.py
 ```
 
-5. Once the script completes, besides updating the licenses for your inactive users, there will also be a resulting *inactive_users.csv* file, containing a list of all identified inactive users for your reference. Please note this script is only a starting poitn and reference the limitations below.
+5. Once the script completes, besides updating the licenses for your inactive users, there will also be a resulting *inactive_users.csv* file, containing a list of all identified inactive users for your reference. 
+
+This script is meant to only be a starting point. Please also reference the limitations below.
 
 ## Limitations of python script / post-script action items
 
